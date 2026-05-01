@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GreenMind AI</title>
+  <link rel="icon" href="logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Clash+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -199,7 +200,7 @@
   <!-- LOGIN -->
   <div id="login-screen">
     <div class="login-box">
-      <div class="login-orb">🤖</div>
+      <div class="login-orb"><img src="logo.png" alt="Bot Logo" style="width: 50px; height: 50px; object-fit: contain;"></div>
       <div class="login-name">GreenMind AI</div>
       <div class="login-sub">Powered by Gemini · Secured by Firebase</div>
       <button class="btn-signin" onclick="loginGoogle()">
@@ -218,7 +219,7 @@
   <div id="chat-screen">
     <div class="topbar">
       <div class="topbar-left">
-        <div class="top-icon">🤖</div>
+        <div class="top-icon"><img src="logo.png" alt="Bot Logo" style="width: 24px; height: 24px; object-fit: contain;"></div>
         <div class="top-title">GreenMind AI</div>
         <div class="status-pill"><div class="status-dot"></div>ONLINE</div>
       </div>
@@ -350,7 +351,7 @@ function addMsg(type, text, animate = true) {
   row.className = `row ${type}`;
   if (!animate) row.style.animation = "none";
   const avHTML = type === "bot"
-    ? `<div class="av bot">🤖</div>`
+    ? `<div class="av bot"><img src="logo.png" alt="Bot Logo" style="width: 100%; height: 100%; object-fit: cover;"></div>`
     : me?.photoURL
       ? `<div class="av usr"><img src="${me.photoURL}"></div>`
       : `<div class="av usr">${(me?.displayName||"U")[0].toUpperCase()}</div>`;
@@ -364,7 +365,7 @@ function showTyping() {
   const id  = "typ-" + Date.now();
   const row = document.createElement("div");
   row.id = id; row.className = "row bot";
-  row.innerHTML = `<div class="av bot">🤖</div><div class="bubble-wrap"><div class="bubble"><div class="typing-wrap"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div></div>`;
+  row.innerHTML = `<div class="av bot"><img src="logo.png" alt="Bot Logo" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="bubble-wrap"><div class="bubble"><div class="typing-wrap"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div></div>`;
   box.appendChild(row); scrollBot(); return id;
 }
 
