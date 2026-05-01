@@ -120,7 +120,7 @@ uvicorn main:app --reload
 
 ## 🎬 Demo 
 
-*(Thêm hình ảnh screenshot của ứng dụng hoặc link video demo đồ án vào đây)*
+https://drive.google.com/file/d/1xx4BZIYvd85vyIhOrq6-a3Yv2Ss9ZbyR/view?usp=sharing
 
 ---
 
