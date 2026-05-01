@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from routers import chat, messages
@@ -38,6 +38,12 @@ async def root():
 async def health_check():
     """Health check endpoint – dùng để kiểm tra trạng thái server."""
     return {"status": "ok"}
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    """Tránh lỗi 404 khi trình duyệt tự động gọi favicon."""
+    return Response(status_code=204)
 
 
 # ── Đăng ký các router ───────────────────────────────────────────
