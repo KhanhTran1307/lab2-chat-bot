@@ -5,10 +5,10 @@
 ---
 
 ## 👨‍🎓 Thông tin sinh viên
-- **Họ và tên:** Trần Khánh (thay đổi nếu cần)
-- **Mã số sinh viên:** [Nhập MSSV của bạn]
-- **Môn học/Đồ án:** [Nhập tên môn học / Đồ án]
-- **Giảng viên hướng dẫn:** [Nhập tên Giảng viên]
+- **Họ và tên:** Trần Nguyễn Quốc Khánh
+- **Mã số sinh viên:** 24120192
+- **Môn học/Đồ án:** Tư duy tính toán / Lab 2
+- **Giảng viên hướng dẫn:** Lê Đức Khoan
 
 ---
 
@@ -82,8 +82,9 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Cài đặt các thư viện cần thiết:
+Cài đặt các thư viện cần thiết (Requirements):
 ```bash
+# Vì file requirements.txt nằm ở thư mục ngoài, dùng lệnh sau:
 pip install -r ../requirements.txt
 ```
 
@@ -120,8 +121,6 @@ uvicorn main:app --reload
 ## 🎬 Demo 
 
 *(Thêm hình ảnh screenshot của ứng dụng hoặc link video demo đồ án vào đây)*
-
-![Demo Giao diện](link_anh_demo_cua_ban_neu_co.png)
 
 ---
 
