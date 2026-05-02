@@ -120,7 +120,7 @@ uvicorn main:app --reload
 
 ## 🎬 Demo 
 
-https://drive.google.com/file/d/1xx4BZIYvd85vyIhOrq6-a3Yv2Ss9ZbyR/view?usp=sharing
+https://drive.google.com/file/d/1x6wxAgwRnCIL9GdD29Xx0a2jCDnmP0WE/view?usp=sharing
 
 ---
 
