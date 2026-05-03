@@ -33,3 +33,4 @@ Thumbs.db
 
 # Firebase credentials
 firebase-key.json
+frontend/config.js

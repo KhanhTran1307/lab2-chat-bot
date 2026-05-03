@@ -260,14 +260,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/fireba
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
-const firebaseConfig = {
-  apiKey:            "AIzaSyB3-0_Yziwkt-" + "vrx4hIjHwd97GzTM9rh0Q",
-  authDomain:        "my-chatbot-8bf53.firebaseapp.com",
-  projectId:         "my-chatbot-8bf53",
-  storageBucket:     "my-chatbot-8bf53.firebasestorage.app",
-  messagingSenderId: "91514304333",
-  appId:             "1:91514304333:web:85f288ea128be394ee2904"
-};
+import { firebaseConfig } from "./config.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
