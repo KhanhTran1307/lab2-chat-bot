@@ -2,11 +2,14 @@ from fastapi import APIRouter, HTTPException
 from google import genai
 from models import ChatRequest
 from routers.messages import chat_history
+from dotenv import load_dotenv
 import os
+
+load_dotenv()  # ← THÊM DÒNG NÀY
 
 router = APIRouter()
 
-API_KEY = os.getenv("GEMINI_API_KEY") or "YOUR_API_KEY_HERE"
+API_KEY = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=API_KEY)
 
 
@@ -23,7 +26,6 @@ async def chat(request: ChatRequest):
 
         answer = response.text
 
-        # Lưu lịch sử vào bộ nhớ
         if user_id:
             if user_id not in chat_history:
                 chat_history[user_id] = []
@@ -37,6 +39,6 @@ async def chat(request: ChatRequest):
         if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
             raise HTTPException(
                 status_code=429,
-                detail="API Gemini đã hết quota miễn phí. Vui lòng thử lại sau vài phút hoặc kiểm tra billing tại https://ai.dev/rate-limit"
+                detail="API Gemini đã hết quota. Vui lòng thử lại sau."
             )
         raise HTTPException(status_code=500, detail=err_str)
